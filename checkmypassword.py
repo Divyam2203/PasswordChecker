@@ -2,8 +2,7 @@ import requests
 import hashlib
 import sys
 
-# returns api data from pwnedpassword.com 
-# query_char is the hashed version of our password
+
 def request_api_data(query_char):
   url = 'https://api.pwnedpasswords.com/range/'+ query_char
   res = requests.get(url)
@@ -19,11 +18,6 @@ def get_password_leaks_count(hashes,hashes_to_check):
   return 0
 
 
-# actual password is converted into hahsed password
-# sha1 is the hashing algorithm used
-# encoding the password in utf-8 format is necessary before passing it to hashlib algorithm
-# hexdigest returns a string in hexadecimal of hash object  
-# string in uppercase is required hence .upper()is used
 def pwned_api_check(password):
   sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
   first5_char, tail = sha1password[:5], sha1password[5:]
