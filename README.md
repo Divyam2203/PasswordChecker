@@ -1,4 +1,14 @@
+# Password Security Checker
 
+This command-line application (CLI) helps you assess the strength of your passwords by checking them against known compromised passwords in the Have I Been Pwned (HIBP) Pwned Passwords database. It leverages secure hashing and k-anonymity to protect your privacy.
+
+## Features:
+
+- **Checks password strength**: Identifies if your password has been exposed in data breaches using the Pwned Passwords API.
+- **Secure hashing**: Hashes your password using a cryptographically secure algorithm (e.g., SHA-256) before sending a portion of the hash to the API, ensuring your password itself is never transmitted.
+- **Privacy-focused**: Utilizes k-anonymity to protect user privacy. Only the first few characters of the hash are sent to the API, making it impossible to reconstruct the original password.
+
+## Function Discriptions:
 
 ### func request_api_data() : 
 - returns api data from pwnedpassword.com 
