@@ -26,3 +26,8 @@ This command-line application (CLI) helps you assess the strength of your passwo
 - hexdigest returns a string in hexadecimal of hash object  
 - string in uppercase is required hence .upper()is used
 - response and tail are passed on to get_password_leaks_count()
+
+
+## Contributing
+
+Feel free to fork this repository and contribute improvements. Pull requests are welcome!
